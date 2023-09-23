@@ -1,8 +1,8 @@
 # Descrição
 
-Neste exercício, você vai criar uma função que recebe informações sobre um Pokémon e retorna um objeto que o representa.
+Neste exercício, você irá uma função que filtra um vetor com base em um critério qualquer de filtragem.
 
-Objetivo desse exercício é praticar a criação de funções e objetos em JavaScript. 
+Objetivo desse exercício é praticar a ordenação de vetores em JavaScript.
 
 **Todas as alterações devem ser feitas nos arquivos já existentes**
 
@@ -10,29 +10,29 @@ Objetivo desse exercício é praticar a criação de funções e objetos em Java
 
 ## Instruções:
 
-1. Crie uma função chamada `criarPokemon` que aceita quatro argumentos: 
-  - nome (string), tipo (string), nivel (number) e hp (number).
-2. Dentro da função, crie um objeto vazio chamado pokemon.
-3. Adicione as seguintes propriedades ao objeto pokemon com base nos argumentos recebidos:
-  - `nome`: Nome do Pokémon (string).
-  - `tipo`: Tipo do Pokémon (string).
-  - `nivel`: Nível do Pokémon (number).
-  - `hp`: Pontos de vida do Pokémon (number).
-4. Retorne o objeto pokemon preenchido.
-5. Fora da função, chame `criarPokemon()` passando valores fictícios como argumentos e armazene o objeto resultante.
-6. Exiba o objeto resultante no console.
+Considere que uma tarefa é representada por objeto que possui as seguintes propriedades como mostra o exemplo abaixo: título, concluida, prioridade e data.
 
-
-Exemplo de criação da função e chamada:
-
-```javascript
-function criarPokemon(nome, tipo, nivel, hp) {
-  ...
-}
-
-const meuPokemon = criarPokemon("Pikachu", "Elétrico", 25, 80);
-console.log(meuPokemon);
+```js
+const tarefas = [
+  { titulo: "Estudar JavaScript", concluida: false, prioridade: 2, data: "2023-08-15" };
+  { titulo: "Estudar HTML e CSS", concluida: true, prioridade: 1, data: "2023-08-10" }
+]
 ```
-Dica: 
 
-- Use os argumentos passados para a função para preencher as propriedades do Pokémon.
+1. Crie uma função chamada ordenarTarefas que aceita dois argumentos: o array de tarefas e um critério de ordenação (por exemplo, "prioridade" ou "titulo") e ordem (crescente ou decrescente).
+2. Implemente a lógica para ordenar o array de tarefas com base no critério fornecido.
+  -  Se o critério for "prioridade", as tarefas devem ser ordenadas pela propriedade prioridade.
+3. A função deve retornar o vetor ordenado.
+Exemplo:
+
+```js
+const tarefas = [
+  { titulo: "Estudar JavaScript", data: "2023-08-15" },
+  { titulo: "Fazer compras", data: "2023-08-10" },
+  // ...
+];
+
+const tarefasOrdenadasPorData = ordenarTarefas(tarefas, "data", "crescente");
+console.log(tarefasOrdenadasPorData);
+```
+
