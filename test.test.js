@@ -28,6 +28,11 @@ test("Tentando ordenar usando uma ordem inválida", () => {
   expect(() => ordenarTarefas(tarefas, 'concluida', "dsdas")).toThrow()
 })
 
+test("Tentando ordenar usando uma propriedade inexistente", () => {
+  const tarefas = inicializarTarefas()
+  expect(() => ordenarTarefas(tarefas, 'dsadasdasdas', ASC)).toThrow()
+})
+
 test('Ordenando por conclusão', () => {
   let tarefas = inicializarTarefas()
 
