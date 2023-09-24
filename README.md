@@ -23,6 +23,8 @@ const tarefas = [
 2. Implemente a lógica para ordenar o array de tarefas com base no critério fornecido.
   -  Se o critério for "prioridade", as tarefas devem ser ordenadas pela propriedade prioridade.
 3. A função deve retornar o vetor ordenado.
+4. Quando uma ordem ou uma propriedade inválida for informada, uma exceção deve ser lançada.
+
 Exemplo:
 
 ```js
